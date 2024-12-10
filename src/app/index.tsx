@@ -1,9 +1,17 @@
-import { View, Text } from "react-native";
+import { Button } from "@/components/button";
+import { Steps } from "@/components/steps";
+import { Welcome } from "@/components/welcome";
+import { View } from "react-native";
 
 export default function Index() {
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Text>Hello React Native</Text>
+        <View style={{ flex: 1, padding: 40, gap: 40 }}>
+            <Welcome />
+            <Steps />
+
+            <Button isLoading={false}>
+                <Button.Title>Começar</Button.Title>
+            </Button>
         </View>
     )
 }
